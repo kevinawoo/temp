@@ -68,7 +68,10 @@ module.exports = function(app, passport, db) {
             js: assets.js,
             css: assets.css,
             debug: (process.env.NODE_ENV !== 'production'),
-            webroot: 'public/public'
+            webroot: {
+                replace: 'app/',
+                with: 'public/'
+            }
         });
         // Add assets to local variables
         app.use(function(req, res, next) {
@@ -105,7 +108,7 @@ module.exports = function(app, passport, db) {
 
         // Setting the fav icon and static folder
         app.use(express.favicon());
-        app.use('/public', express.static(config.root + '/public'));
+        app.use('/public', express.static(config.root + '/app'));
 
         app.get('/modules/aggregated.js', function(req, res) {
             res.setHeader('content-type', 'text/javascript');
@@ -121,7 +124,7 @@ module.exports = function(app, passport, db) {
         mean.events.on('modulesFound', function() {
 
             for (var name in mean.modules) {
-                app.use('/' + name, express.static(config.root + '/'+mean.modules[name].source+'/' + name + '/public'));
+                app.use('/' + name, express.static(config.root + '/' + mean.modules[name].source + '/' + name + '/public'));
             }
 
             bootstrapRoutes();

@@ -1,21 +1,21 @@
 {
-	"css": {
-		"public/build/css/dist.min.css": [
-			"public/system/lib/bootstrap/dist/css/bootstrap.css",
-			"public/**/assets/css/*.css"
-		]
-	},
-	"js": {
-		"public/build/js/dist.min.js": [
-			"public/system/lib/angular/angular.js",
-			"public/system/lib/angular-cookies/angular-cookies.js",
-			"public/system/lib/angular-resource/angular-resource.js",
-			"public/system/lib/angular-ui-router/release/angular-ui-router.js",
-			"public/system/lib/angular-bootstrap/ui-bootstrap.js",
-			"public/system/lib/angular-bootstrap/ui-bootstrap-tpls.js",			
-			"public/init.js",
-			"public/*/*.js",			
-			"public/*/*/*.js"			
-		]
-	}
+    "css": {
+        "app/build/css/dist.min.css": [
+            "app/system/lib/bootstrap/dist/css/bootstrap.css",
+            "app/**/assets/css/*.css"
+        ]
+    },
+    "js": {
+        "app/build/js/dist.min.js": [
+            "app/system/lib/angular/angular.js",
+            "app/system/lib/angular-cookies/angular-cookies.js",
+            "app/system/lib/angular-resource/angular-resource.js",
+            "app/system/lib/angular-ui-router/release/angular-ui-router.js",
+            "app/system/lib/angular-bootstrap/ui-bootstrap.js",
+            "app/system/lib/angular-bootstrap/ui-bootstrap-tpls.js",
+            "app/init.js",
+            "app/*/*.js",
+            "app/*/*/*.js"
+        ]
+    }
 }

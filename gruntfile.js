@@ -5,24 +5,29 @@ module.exports = function(grunt) {
 
     // Project Configuration
     grunt.initConfig({
+
+        web: {
+            app: 'app'
+        },
+
         pkg: grunt.file.readJSON('package.json'),
         assets: grunt.file.readJSON('server/config/assets.json'),
         watch: {
             js: {
-                files: ['gruntfile.js', 'server.js', 'server/**/*.js', 'public/js/**', 'test/**/*.js'],
+                files: ['gruntfile.js', 'server.js', 'server/**/*.js', '<%= web.app %>/js/**', 'test/**/*.js'],
                 tasks: ['jshint'],
                 options: {
                     livereload: true
                 }
             },
             html: {
-                files: ['public/views/**', 'server/views/**'],
+                files: ['<%= web.app %>/views/**', 'server/views/**'],
                 options: {
                     livereload: true
                 }
             },
             css: {
-                files: ['public/css/**'],
+                files: ['<%= web.app %>/css/**'],
                 tasks: ['csslint'],
                 options: {
                     livereload: true
@@ -31,7 +36,7 @@ module.exports = function(grunt) {
         },
         jshint: {
             all: {
-                src: ['gruntfile.js', 'server.js', 'server/**/*.js', 'public/js/**', 'test/**/*.js', '!test/coverage/**/*.js'],
+                src: ['gruntfile.js', 'server.js', 'server/**/*.js', '<%= web.app %>/js/**', 'test/**/*.js', '!test/coverage/**/*.js'],
                 options: {
                     jshintrc: true
                 }
@@ -50,7 +55,7 @@ module.exports = function(grunt) {
                 csslintrc: '.csslintrc'
             },
             all: {
-                src: ['public/css/**/*.css']
+                src: ['<%= web.app %>/css/**/*.css']
             }
         },
         cssmin: {
@@ -63,7 +68,7 @@ module.exports = function(grunt) {
                 script: 'server.js',
                 options: {
                     args: [],
-                    ignore: ['public/**'],
+                    ignore: ['<%= web.app %>/**'],
                     ext: 'js,html',
                     nodeArgs: ['--debug'],
                     delayTime: 1,

@@ -1,6 +1,6 @@
 # MEAN Stack
 
-MEAN is a boilerplate that provides a nice starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. It is designed to give you quick and organized way to start developing of MEAN based web apps with useful modules like mongoose and passport pre-bundled and configured. We mainly try to take care of the connection points between existing popular frameworks and solve common integration problems.  
+MEAN is a boilerplate that provides a nice starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. It is designed to give you quick and organized way to start developing of MEAN based web apps with useful modules like mongoose and passport pre-bundled and configured. We mainly try to take care of the connection points between existing popular frameworks and solve common integration problems.
 
 ## Prerequisites
 * Node.js - Download and Install [Node.js](http://www.nodejs.org/download/). You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm
@@ -35,11 +35,11 @@ $ npm install -g bower
   We recommend using [Grunt](https://github.com/gruntjs/grunt-cli) to start the server:
 
     $ grunt
-    
+
   When not using grunt you can use:
 
     $ node server
-    
+
   Then open a browser and go to:
 
     http://localhost:3000
@@ -81,7 +81,7 @@ Bower Clean Cache:
 $ bower cache clean
 ```
 
- 
+
 ## Configuration
 All configuration is specified in the [server/config](server/config/) folder, particularly the [config.js](server/config/config.js) file and the [env](server/config/env/) files. Here you will need to specify your application name, database name, as well as hook up any social app keys if you want integration with Twitter, Facebook, GitHub or Google.
 
@@ -110,10 +110,10 @@ If you are using node instead of grunt, it is very similar:
   * [The Model](server/models/article.js) - Where we define our object schema.
   * [The Controller](server/controllers/articles.js) - Where we take care of our backend logic.
   * [NodeJS Routes](server/routes) - Where we define our REST service routes.
-  * [AngularJs Routes](public/articles/routes/articles.js) - Where we define our CRUD routes.
-  * [The AngularJs Service](public/articles/services/articles.js) - Where we connect to our REST service.
-  * [The AngularJs Controller](public/articles/controllers/articles.js) - Where we take care of  our frontend logic.
-  * [The AngularJs Views Folder](public/articles/views) - Where we keep our CRUD views.
+  * [AngularJs Routes](app/articles/routes/articles.js) - Where we define our CRUD routes.
+  * [The AngularJs Service](app/articles/services/articles.js) - Where we connect to our REST service.
+  * [The AngularJs Controller](app/articles/controllers/articles.js) - Where we take care of  our frontend logic.
+  * [The AngularJs Views Folder](app/articles/views) - Where we keep our CRUD views.
 
 ## Heroku Quick Deployment
 Before you start make sure you have <a href="https://toolbelt.heroku.com/">heroku toolbelt</a> installed and an accessible mongo db instance - you can try <a href="http://www.mongohq.com/">mongohq</a> which has an easy setup.
