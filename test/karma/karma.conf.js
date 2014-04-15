@@ -16,13 +16,13 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'app/system/lib/angular/angular.js',
-            'app/system/lib/angular-mocks/angular-mocks.js',
-            'app/system/lib/angular-cookies/angular-cookies.js',
-            'app/system/lib/angular-resource/angular-resource.js',
-            'app/system/lib/angular-ui-router/release/angular-ui-router.js',
-            'app/system/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-            'app/system/lib/angular-bootstrap/ui-bootstrap.js',
+            'app/lib/bower_components/angular/angular.js',
+            'app/lib/bower_components/angular-mocks/angular-mocks.js',
+            'app/lib/bower_components/angular-cookies/angular-cookies.js',
+            'app/lib/bower_components/angular-resource/angular-resource.js',
+            'app/lib/bower_components/angular-ui-router/release/angular-ui-router.js',
+            'app/lib/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+            'app/lib/bower_components/angular-bootstrap/ui-bootstrap.js',
             'app/*/*.js',
             'app/{auth,articles}/*/*.js',
             'app/system/{controllers,routes,services}/*.js',
