@@ -113,6 +113,8 @@ module.exports = function(grunt) {
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
 
+    grunt.registerTask('serve', 'default');
+
     //Default task(s).
     if (process.env.NODE_ENV === 'production') {
         grunt.registerTask('default', ['jshint', 'csslint', 'cssmin', 'uglify', 'concurrent']);
