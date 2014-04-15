@@ -1,7 +1,10 @@
 'use strict';
 
 module.exports = function(grunt) {
-    require('time-grunt')(grunt);
+
+    if (process.env.NODE_ENV !== 'production') {
+        require('time-grunt')(grunt);
+    }
 
     // Project Configuration
     grunt.initConfig({
