@@ -10,3 +10,4 @@ test/coverage/
 modules/public/
 modules/views/
 /app/build/
+dist/
