@@ -1,4 +1,4 @@
-# [![MEAN Logo](http://www.mean.io/img/logos/meanlogo.png)](http://mean.io/) MEAN Stack
+# [![MEAN Logo](http://www.mean.io/img/logos/meanlogo.png)](http://mean.io/) MEAN Stack + <img src="http://yeoman.io/assets/img/yeoman-logo.a053.png" style="width: 116px"> Yoemon
 
 [![Build Status](https://travis-ci.org/linnovate/mean.png?branch=master)](https://travis-ci.org/linnovate/mean)
 [![Dependencies Status](https://david-dm.org/linnovate/mean.png)](https://david-dm.org/linnovate/mean)
