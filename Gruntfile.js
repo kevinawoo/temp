@@ -10,7 +10,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         web: {
-            app: 'app'
+            app: 'app',
+            dist: 'dist'
         },
 
         pkg: grunt.file.readJSON('package.json'),
@@ -53,6 +54,36 @@ module.exports = function(grunt) {
                 files: '<%= assets.js %>'
             }
         },
+
+
+        // CSS
+        compass: {
+            options: {
+                sassDir: '<%= web.app %>/styles',
+                cssDir: '.tmp/styles',
+                generatedImagesDir: '.tmp/images/generated',
+                imagesDir: '<%= web.app %>/images',
+                javascriptsDir: '<%= web.app %>/scripts',
+                fontsDir: '<%= web.app %>/styles/fonts',
+                importPath: '<%= web.app %>/bower_components',
+                httpImagesPath: '/images',
+                httpGeneratedImagesPath: '/images/generated',
+                httpFontsPath: '/styles/fonts',
+                relativeAssets: false,
+                assetCacheBuster: false,
+                raw: 'Sass::Script::Number.precision = 10\n'
+            },
+            dist: {
+                options: {
+                    generatedImagesDir: '<%= web.dist %>/images/generated'
+                }
+            },
+            server: {
+                options: {
+                    debugInfo: true
+                }
+            }
+        },
         csslint: {
             options: {
                 csslintrc: '.csslintrc'
@@ -66,6 +97,8 @@ module.exports = function(grunt) {
                 files: '<%= assets.css %>'
             }
         },
+
+
         nodemon: {
             dev: {
                 script: 'server.js',
