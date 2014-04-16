@@ -1,8 +1,14 @@
 .DS_Store
+
+# temp dirs
 .nodemonignore
 .sass-cache/
 .bower-*/
 .idea/
+.tmp
+
+
+# generated components
 node_modules/
 app/lib/bower_components/
 mean.iml
