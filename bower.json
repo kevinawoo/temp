@@ -12,6 +12,7 @@
         "angular-sanitize": "latest",
         "angular-ui-router": "#master",
         "bootstrap-sass-official": "latest",
+        "bootstrap": "3.0.3",
         "es5-shim": "latest",
         "jquery": "latest",
         "json3": "latest"
