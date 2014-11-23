@@ -1,1 +1,1 @@
-checkout this folder! [folder](/temp/tree/master/test)
+checkout this folder! [folder](/test)
