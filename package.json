@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/kevinawoo/temp/issues"
   },
-  "homepage": "https://github.com/kevinawoo/temp#readme"
+  "homepage": "https://github.com/kevinawoo/temp#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "lodash": "^3.10.1",
+    "request": "^2.65.0"
+  }
 }
